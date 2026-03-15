@@ -137,13 +137,17 @@
 
     <!-- ================================================================
          BOT CONFIG
-         - apiUrl: Your bot's API endpoint (must match bot_id in config.yml)
+         - apiUrl: Your Bot Factory streaming Lambda URL
+         - botId: Must match bot_id in your bot's config.yml
+         - apiKey: Your bot's API key (generated with: make gen-key-prod)
          - botName: Display name used in chat labels
          - placeholder: Input field placeholder text
          ================================================================ -->
     <script>
       window.BOT_CONFIG = {
-        apiUrl: "/api/your_bot",
+        apiUrl: "https://YOUR_LAMBDA_URL.lambda-url.us-east-1.on.aws",
+        botId: "your-bot-id",
+        apiKey: "bfk_YOUR_API_KEY",
         botName: "YourBot",
         placeholder: "Ask a question...",
       };
